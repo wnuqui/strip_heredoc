@@ -7,7 +7,9 @@ defmodule StripHeredoc.Mixfile do
      elixir: "~> 1.4",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     description: description(),
+     package: package()]
   end
 
   def application, do: []
@@ -19,6 +21,24 @@ defmodule StripHeredoc.Mixfile do
       {:credo, "~> 0.5", only: [:dev, :test]},
       {:inch_ex, only: :docs},
       {:ex_doc, ">= 0.0.0", only: :dev}
+    ]
+  end
+
+  defp description do
+    """
+    StripHeredoc is very small library for Elixir projects that needs to strips indentation in heredocs.
+    """
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README.md"],
+      maintainers: ["Wilfrido T. Nuqui Jr."],
+      licenses: ["MIT"],
+      links: %{
+        "GitHub" => "https://github.com/wnuqui/strip_heredoc",
+        "Docs" => "http://hexdocs.pm/strip_heredoc"
+      }
     ]
   end
 end
