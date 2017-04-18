@@ -21,6 +21,7 @@ defmodule StripHeredocTest do
     str = strip_heredoc """
       foo
         bar
+
       baz
     """
 
