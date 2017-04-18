@@ -26,7 +26,7 @@ defmodule StripHeredoc.Mixfile do
 
   defp description do
     """
-    StripHeredoc is very small library for Elixir projects that needs to strips indentation in heredocs.
+    This is a one-method utility library for Elixir projects that needs to strips indentation in heredocs.
     """
   end
 
