@@ -6,7 +6,7 @@
 StripHeredoc is very small library for Elixir projects that needs to strips indentation in heredocs.
 This is a direct Elixir port from Rails!
 
-The complete documentation for StripHeredoc is located [here](https://hexdocs.pm/StripHeredoc).
+The complete documentation for StripHeredoc is located [here](https://hex.pm/packages/strip_heredoc).
 
 ### Adding StripHeredoc To Your Project
 
