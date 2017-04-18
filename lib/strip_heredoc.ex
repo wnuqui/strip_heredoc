@@ -36,9 +36,9 @@ defmodule StripHeredoc do
   """
   def strip_heredoc(""), do: ""
 
-  def strip_heredoc(string) do
-    spaces = Regex.scan(~r/^[ \t]*(?=\S)/m, string)
-    min_spaces = Enum.min(spaces)
-    Regex.replace(~r/^#{min_spaces}/, string, "")
+  def strip_heredoc(heredoc) do
+    list_of_spaces = Regex.scan(~r/^[ \t]*(?=\S)/m, heredoc)
+    min_spaces = Enum.min(list_of_spaces)
+    Regex.replace(~r/^#{min_spaces}/, heredoc, "")
   end
 end
