@@ -16,7 +16,9 @@ defmodule StripHeredoc.Mixfile do
     [
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
       {:ex_unit_notifier, "~> 0.1", only: :test},
-      {:credo, "~> 0.5", only: [:dev, :test]}
+      {:credo, "~> 0.5", only: [:dev, :test]},
+      {:inch_ex, only: :docs},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end
