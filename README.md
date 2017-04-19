@@ -13,7 +13,7 @@ To use `strip_heredoc` with your projects, edit your `mix.exs` file and add it a
 
 ```elixir
 defp deps do
-  [{:strip_heredoc, "~> 0.7.0"}]
+  [{:strip_heredoc, "~> 0.8.0"}]
 end
 ```
 
