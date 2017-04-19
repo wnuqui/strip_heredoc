@@ -27,14 +27,7 @@ to the top of the module so you can use `strip_heredoc/1` function.
 
 Example:
 
-```elixir
-iex(2)> str = strip_heredoc """
-...(2)>   foo
-...(2)>     bar
-...(2)>   baz
-...(2)> """
-"foo\n    bar\n  baz\n"
-```
+<img src="strip_heredoc.png">
 
 ## License
 
