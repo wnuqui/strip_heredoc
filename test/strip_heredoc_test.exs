@@ -9,22 +9,23 @@ defmodule StripHeredocTest do
   end
 
   test "strip heredoc on a regular indented heredoc" do
-    str = strip_heredoc """
+    heredoc = """
       foo
         bar
       baz
     """
-    assert "foo\n  bar\nbaz\n", strip_heredoc(str)
+
+    assert strip_heredoc(heredoc) == "foo\n  bar\nbaz\n"
   end
 
   test "strip heredoc on a regular indented heredoc with blank lines" do
-    str = strip_heredoc """
+    heredoc = """
       foo
         bar
 
       baz
     """
 
-    assert "foo\n  bar\n\nbaz\n", strip_heredoc(str)
+    assert strip_heredoc(heredoc) == "foo\n  bar\n\nbaz\n"
   end
 end
